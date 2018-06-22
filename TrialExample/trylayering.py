@@ -20,8 +20,10 @@ image1 = "Red200x200.GIF"
 photo1 = PhotoImage(file=image1)
 image2 = "Green100x100.GIF"
 photo2 = PhotoImage(file=image2)
+photo2=photo2.subsample(10)
 image3 = "Blue100x100.GIF"
 photo3 = PhotoImage(file=image3)
+photo3=photo3.subsample(10)
 # make canvas the size of image1/photo1
 width1 = photo1.width()
 height1 = photo1.height()

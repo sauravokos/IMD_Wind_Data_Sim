@@ -1,0 +1,19 @@
+For MapFinal.PNG
+
+560px Height X 425px Width
+
+ 
+          69.5Deg N
+	  _________
+	 |         |
+	 |         |
+1.0Deg E |         | 148.9Deg E
+	 |         |
+	 |_________|
+
+	 -69.3Deg N
+
+
+Least Count:
+Latitude:  0.24785714285 Deg/px
+Longitude: 0.348 Deg/px

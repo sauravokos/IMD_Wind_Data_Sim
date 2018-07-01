@@ -1,0 +1,40 @@
+import Tkinter as tk
+from Tkinter import *
+from PIL import ImageTk
+
+def show_image():
+ i1 = canvas.create_image(61.26,154.16, image=tk_img1)
+ i2 = canvas.create_image(61.26,148.64, image=tk_img1)
+ i3 = canvas.create_image(61.26,115.44, image=tk_img1)
+ while True:
+    canvas.itemconfigure(i1, state=tk.NORMAL)
+    canvas.itemconfigure(i2, state=tk.NORMAL)
+    canvas.itemconfigure(i3, state=tk.NORMAL)
+    button.configure(text = 'Hide')
+    yield        
+    canvas.itemconfigure(i1, state=tk.HIDDEN)
+    canvas.itemconfigure(i2, state=tk.HIDDEN)
+    canvas.itemconfigure(i3, state=tk.HIDDEN)
+    button.configure(text = 'Show')        
+    yield
+		
+root = tk.Tk()
+image1 = "MapFinal.gif"
+photo1 = ImageTk.PhotoImage(file=image1)
+width1 = photo1.width()
+height1 = photo1.height()
+
+canvas = tk.Canvas(root, width=width1, height=height1)
+canvas.pack()
+canvas.grid(row=0, column=0)
+tk_img1 = ImageTk.PhotoImage(file='icons8-wind-speed-3-7-50.gif')
+tk_img1= PhotoImage(file='icons8-wind-speed-3-7-50.gif').subsample(2)
+
+button = tk.Button(
+    root, text="Show", command=show_image().next, anchor='w',
+    width=10, activebackground="#33B5E5")
+button.grid(row=1, column=0)
+x = (width1)/2.0
+y = (height1)/2.0
+canvas.create_image(x, y, image=photo1)
+root.mainloop()

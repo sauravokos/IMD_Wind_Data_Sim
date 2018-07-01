@@ -31,7 +31,7 @@ tk_img1 = ImageTk.PhotoImage(file='icons8-wind-speed-3-7-50.gif')
 tk_img1= PhotoImage(file='icons8-wind-speed-3-7-50.gif').subsample(2)
 
 button = tk.Button(
-    root, text="Show", command=show_image().next, anchor='w',
+    root, text="Show", command=show_image().__next__, anchor='w',
     width=10, activebackground="#33B5E5")
 button.grid(row=1, column=0)
 x = (width1)/2.0

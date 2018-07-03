@@ -1,0 +1,41 @@
+import h5py
+import numpy as np
+def height(filename):
+ file=h5py.File(filename, 'r')
+ dataset=file['HEIGHT_ASSIGNMENT_METHOD']
+ for i in range(0,len(dataset)):
+  print dataset[i]
+  i=i+1;
+ file.close()
+def Lat(filename):
+ file=h5py.File(filename, 'r')
+ dataset=file['Latitude']
+ for i in range(0,len(dataset)):
+  print dataset[i]
+  i=i+1;
+ file.close()
+ def Lon(filename):
+  file=h5py.File(filename, 'r')
+  dataset=file['Longitude']
+  for i in range(0,len(dataset)):
+   print dataset[i]
+   i=i+1;
+ file.close()
+ def Wis(filename):
+  file=h5py.File(filename, 'r')
+  dataset=file['WIND_SPEED']
+  for i in range(0,len(dataset)):
+   print dataset[i]
+   i=i+1;
+ file.close()
+ def Wid(filename):
+  file=h5py.File(filename, 'r')
+  dataset=file['WIND_DIRECTION']
+  for i in range(0,len(dataset)):
+   print dataset[i]
+   i=i+1;
+ file.close()
+def main():
+ Lat('C:/Users/Natasha/Desktop/IMD_WIND_DATA_SIM/datasets/3RIMG_13JUN2018_0015_L2P_IRW.h5')
+if __name__=="__main__":
+ main()

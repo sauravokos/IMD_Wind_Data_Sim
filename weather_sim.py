@@ -139,6 +139,7 @@ class PlottingGUI(tk.Frame):
         
 
     def analyseDset(self): 
+        
         self.path = askopenfilename(filetypes = (("Dataset files", "*.h5")
                                                     ,("All files", "*.*") ))
         self.jfname = path_leaf(self.path)
@@ -149,6 +150,7 @@ class PlottingGUI(tk.Frame):
 
 
     def extDset(self):
+        
         hf = hp.File(self.path, 'r')
 
         HaM = hf.get('HEIGHT_ASSIGNMENT_METHOD')
